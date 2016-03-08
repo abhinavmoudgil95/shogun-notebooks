@@ -1,0 +1,391 @@
+D = 10 N = 100
+/usr/local/lib/python2.7/dist-packages/memory_profiler.py:88: UserWarning: psutil module not found. memory_profiler will be slow
+  warnings.warn("psutil module not found. memory_profiler will be slow")
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     63.5 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     63.5 MiB      0.0 MiB   	start1 = time.time()
+    10     63.6 MiB      0.1 MiB   	train_features = RealFeatures(all_samples)
+    11     63.7 MiB      0.1 MiB   	preprocessor = PCA(AUTO)
+    12     63.7 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     63.9 MiB      0.2 MiB   	preprocessor.init(train_features)
+    14     63.9 MiB      0.1 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     63.9 MiB      0.0 MiB   	end1 = time.time()	
+    16     63.9 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     64.0 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     64.0 MiB      0.0 MiB   	start2 = time.time()
+    21     64.0 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22     64.1 MiB      0.1 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23     64.1 MiB      0.0 MiB   	end2 = time.time()	
+    24     64.1 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 10 N = 1000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     64.4 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     64.4 MiB      0.0 MiB   	start1 = time.time()
+    10     64.6 MiB      0.2 MiB   	train_features = RealFeatures(all_samples)
+    11     64.6 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12     64.6 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     64.6 MiB      0.0 MiB   	preprocessor.init(train_features)
+    14     64.7 MiB      0.2 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     64.7 MiB      0.0 MiB   	end1 = time.time()	
+    16     64.7 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     64.7 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     64.7 MiB      0.0 MiB   	start2 = time.time()
+    21     64.7 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22     64.9 MiB      0.2 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23     64.9 MiB      0.0 MiB   	end2 = time.time()	
+    24     64.9 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 10 N = 10000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     68.3 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     68.3 MiB      0.0 MiB   	start1 = time.time()
+    10     69.8 MiB      1.5 MiB   	train_features = RealFeatures(all_samples)
+    11     69.8 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12     69.8 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     69.8 MiB      0.0 MiB   	preprocessor.init(train_features)
+    14     68.3 MiB     -1.5 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     68.3 MiB      0.0 MiB   	end1 = time.time()	
+    16     68.3 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     68.3 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     68.3 MiB      0.0 MiB   	start2 = time.time()
+    21     68.3 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22     72.8 MiB      4.6 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23     72.8 MiB      0.0 MiB   	end2 = time.time()	
+    24     72.8 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 100 N = 100
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     66.1 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     66.1 MiB      0.0 MiB   	start1 = time.time()
+    10     66.1 MiB      0.0 MiB   	train_features = RealFeatures(all_samples)
+    11     66.1 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12     66.1 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     66.1 MiB      0.0 MiB   	preprocessor.init(train_features)
+    14     66.1 MiB      0.0 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     66.1 MiB      0.0 MiB   	end1 = time.time()	
+    16     66.1 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     66.1 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     66.1 MiB      0.0 MiB   	start2 = time.time()
+    21     66.1 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22     66.2 MiB      0.0 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23     66.2 MiB      0.0 MiB   	end2 = time.time()	
+    24     66.2 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 100 N = 1000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     68.6 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     68.6 MiB      0.0 MiB   	start1 = time.time()
+    10     70.1 MiB      1.5 MiB   	train_features = RealFeatures(all_samples)
+    11     70.1 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12     70.1 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     70.1 MiB      0.0 MiB   	preprocessor.init(train_features)
+    14     68.7 MiB     -1.4 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     68.7 MiB      0.0 MiB   	end1 = time.time()	
+    16     68.7 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     68.7 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     68.7 MiB      0.0 MiB   	start2 = time.time()
+    21     68.7 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22     73.2 MiB      4.4 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23     73.2 MiB      0.0 MiB   	end2 = time.time()	
+    24     73.2 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 100 N = 10000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7    106.8 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9    106.8 MiB      0.0 MiB   	start1 = time.time()
+    10    122.0 MiB     15.3 MiB   	train_features = RealFeatures(all_samples)
+    11    122.0 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12    122.0 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13    122.0 MiB      0.0 MiB   	preprocessor.init(train_features)
+    14    106.8 MiB    -15.3 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15    106.8 MiB      0.0 MiB   	end1 = time.time()	
+    16    106.8 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18    106.8 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20    106.8 MiB      0.0 MiB   	start2 = time.time()
+    21    106.8 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22    152.6 MiB     45.8 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23    151.7 MiB     -0.9 MiB   	end2 = time.time()	
+    24    151.7 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 500 N = 100
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     83.3 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     83.3 MiB      0.0 MiB   	start1 = time.time()
+    10     83.3 MiB      0.0 MiB   	train_features = RealFeatures(all_samples)
+    11     83.3 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12     83.3 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     83.3 MiB      0.1 MiB   	preprocessor.init(train_features)
+    14     83.3 MiB      0.0 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     83.3 MiB      0.0 MiB   	end1 = time.time()	
+    16     83.3 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     83.3 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     83.3 MiB      0.0 MiB   	start2 = time.time()
+    21     83.3 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22     83.3 MiB      0.0 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23     83.3 MiB      0.0 MiB   	end2 = time.time()	
+    24     83.3 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 500 N = 1000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     87.1 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     87.1 MiB      0.0 MiB   	start1 = time.time()
+    10     94.7 MiB      7.6 MiB   	train_features = RealFeatures(all_samples)
+    11     94.7 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12     94.7 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     94.7 MiB      0.0 MiB   	preprocessor.init(train_features)
+    14     98.6 MiB      3.9 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     98.6 MiB      0.0 MiB   	end1 = time.time()	
+    16     98.6 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     98.6 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     98.6 MiB      0.0 MiB   	start2 = time.time()
+    21     98.6 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22    117.2 MiB     18.7 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23    116.9 MiB     -0.3 MiB   	end2 = time.time()	
+    24    116.9 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 500 N = 10000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7    240.3 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9    240.0 MiB     -0.3 MiB   	start1 = time.time()
+    10    314.6 MiB     74.7 MiB   	train_features = RealFeatures(all_samples)
+    11    314.7 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12    314.7 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13    314.7 MiB      0.0 MiB   	preprocessor.init(train_features)
+    14    225.6 MiB    -89.1 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15    225.6 MiB      0.0 MiB   	end1 = time.time()	
+    16    225.6 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18    226.0 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20    226.0 MiB      0.0 MiB   	start2 = time.time()
+    21    226.0 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22    302.0 MiB     76.0 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23    302.1 MiB      0.1 MiB   	end2 = time.time()	
+    24    302.1 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 1000 N = 100
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7     71.8 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9     71.8 MiB      0.0 MiB   	start1 = time.time()
+    10     72.1 MiB      0.4 MiB   	train_features = RealFeatures(all_samples)
+    11     72.2 MiB      0.1 MiB   	preprocessor = PCA(AUTO)
+    12     72.2 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13     72.4 MiB      0.2 MiB   	preprocessor.init(train_features)
+    14     72.5 MiB      0.1 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15     72.5 MiB      0.0 MiB   	end1 = time.time()	
+    16     72.5 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18     72.5 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20     72.5 MiB      0.0 MiB   	start2 = time.time()
+    21     72.5 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22     72.6 MiB      0.0 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23     72.6 MiB      0.0 MiB   	end2 = time.time()	
+    24     72.6 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 1000 N = 1000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7    114.0 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9    114.0 MiB      0.0 MiB   	start1 = time.time()
+    10    114.0 MiB      0.0 MiB   	train_features = RealFeatures(all_samples)
+    11    114.0 MiB      0.0 MiB   	preprocessor = PCA(AUTO)
+    12    114.0 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13    121.6 MiB      7.6 MiB   	preprocessor.init(train_features)
+    14    121.6 MiB      0.0 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15    121.6 MiB      0.0 MiB   	end1 = time.time()	
+    16    121.6 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18    121.6 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20    121.6 MiB      0.0 MiB   	start2 = time.time()
+    21    121.6 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22    144.5 MiB     22.9 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23    144.5 MiB      0.0 MiB   	end2 = time.time()	
+    24    144.5 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 1000 N = 10000
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7    388.8 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9    388.8 MiB      0.0 MiB   	start1 = time.time()
+    10    540.1 MiB    151.3 MiB   	train_features = RealFeatures(all_samples)
+    11    540.3 MiB      0.2 MiB   	preprocessor = PCA(AUTO)
+    12    540.2 MiB     -0.1 MiB   	preprocessor.set_target_dim(2)
+    13    540.3 MiB      0.1 MiB   	preprocessor.init(train_features)
+    14    387.8 MiB   -152.5 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15    387.8 MiB      0.0 MiB   	end1 = time.time()	
+    16    387.8 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18    388.1 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20    388.1 MiB      0.0 MiB   	start2 = time.time()
+    21    388.1 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22    550.1 MiB    162.1 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23    550.1 MiB      0.0 MiB   	end2 = time.time()	
+    24    550.1 MiB      0.0 MiB   	return (start2, end2)
+
+
+D = 2000 N = 100
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+     7    117.3 MiB      0.0 MiB   @profile
+     8                             def shogun_pca(all_samples):
+     9    117.3 MiB      0.0 MiB   	start1 = time.time()
+    10    117.4 MiB      0.1 MiB   	train_features = RealFeatures(all_samples)
+    11    117.4 MiB      0.1 MiB   	preprocessor = PCA(AUTO)
+    12    117.4 MiB      0.0 MiB   	preprocessor.set_target_dim(2)
+    13    117.5 MiB      0.1 MiB   	preprocessor.init(train_features)
+    14    117.5 MiB      0.0 MiB   	transformed = preprocessor.apply_to_feature_matrix(train_features)
+    15    117.5 MiB      0.0 MiB   	end1 = time.time()	
+    16    117.5 MiB      0.0 MiB   	return (start1, end1)
+
+
+Filename: pca_compare.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18    117.5 MiB      0.0 MiB   @profile
+    19                             def sklearn_pca(all_samples):
+    20    117.5 MiB      0.0 MiB   	start2 = time.time()
+    21    117.5 MiB      0.0 MiB   	sklearn_pca = sklearnPCA(n_components=2)
+    22    117.5 MiB      0.0 MiB   	sklearn_transf = sklearn_pca.fit_transform(all_samples.T)
+    23    117.5 MiB      0.0 MiB   	end2 = time.time()	
+    24    117.5 MiB      0.0 MiB   	return (start2, end2)
+
